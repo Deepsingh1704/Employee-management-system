@@ -10,8 +10,6 @@ const TaskLList = () => {
       <div className="bg-yellow-300 h-full w-75 rounded-xl shrink-0 "></div>
       <div className="bg-yellow-300 h-full w-75 rounded-xl shrink-0 "></div>
       <div className="bg-yellow-300 h-full w-75 rounded-xl shrink-0 "></div>
-      <div className="bg-yellow-300 h-full w-75 rounded-xl shrink-0 "></div>
-      <div className="bg-yellow-300 h-full w-75 rounded-xl shrink-0 "></div>
     </div>
   );
 };
