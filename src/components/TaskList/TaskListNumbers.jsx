@@ -5,16 +5,16 @@ function TaskListNumbers() {
         <h2 className="text-2xl font-semibold">0</h2>
         <h3 className="text-xl font-bold">New Task</h3>
       </div>
-      <div className="rounded-xl w-[40%]  bg-red-300 py-6 px-9">
+      <div className="rounded-xl w-[40%]  bg-purple-300 py-6 px-9">
         <h2 className="text-2xl font-semibold">0</h2>
         <h3 className="text-xl font-bold">New Task</h3>
       </div>
 
-      <div className="rounded-xl w-[40%]  bg-red-300 py-6 px-9">
+      <div className="rounded-xl w-[40%]  bg-yellow-300 py-6 px-9">
         <h2 className="text-2xl font-semibold">0</h2>
         <h3 className="text-xl font-bold">New Task</h3>
       </div>
-      <div className="rounded-xl w-[40%]  bg-red-300 py-6 px-9">
+      <div className="rounded-xl w-[40%]  bg-green-300 py-6 px-9">
         <h2 className="text-2xl font-semibold">0</h2>
         <h3 className="text-xl font-bold">New Task</h3>
       </div>
