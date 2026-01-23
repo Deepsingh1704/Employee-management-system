@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 * {
-  color: white;
+  color: #fff;
 }
 
 body {
@@ -9,6 +9,11 @@ body {
 }
 
 #Tasklist::-webkit-scrollbar {
+  background-color: transparent;
+  height: 5px;
   width: 0;
-  height: 0;
 }
+
+/* #Tasklist::-webkit-scrollbar-thumb {
+  background-color: transparent;
+} */

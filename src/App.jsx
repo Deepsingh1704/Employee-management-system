@@ -2,16 +2,22 @@
 
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 
-// import Login from "./components/Auth/Login";
+import Login from "./components/Auth/Login";
 
-// import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
+import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
+import { useEffect } from "react";
+import { getLocalStorage, setLocalStorage } from "./utils/LocalStorage";
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    // setLocalStorage()
+    getLocalStorage();
+  });
   return (
-    // <Login />
+    <Login />
     // <EmployeeDashboard />
-    <AdminDashboard />
+    // <AdminDashboard />
   );
-}
+};
 
 export default App;
