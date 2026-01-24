@@ -1,11 +1,14 @@
 import { useState } from "react";
 
-export default function Login() {
+const Login = ({ handleLogin }) => {
+  // console.log(handleLogin);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
+    handleLogin(email, password);
     setEmail("");
     setPassword("");
   };
@@ -45,4 +48,6 @@ export default function Login() {
       </div>
     </div>
   );
-}
+};
+
+export default Login;
