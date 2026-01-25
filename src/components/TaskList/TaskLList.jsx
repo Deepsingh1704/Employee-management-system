@@ -1,4 +1,4 @@
-const TaskLList = () => {
+const TaskLList = ({ data }) => {
   return (
     <div
       id="Tasklist"
@@ -7,7 +7,7 @@ const TaskLList = () => {
       <div className="bg-red-300 h-full w-75 rounded-xl shrink-0 p-5 ">
         <div className="flex justify-between items-center">
           <h2 className="text-sm bg-red-500 px-2 py-1 rounded-sm">high</h2>
-          <h3 className="text-sm font-bold">22jan 2025</h3>
+          <h3 className="text-sm font-bold">{data.tasks[0].taskDate}</h3>
         </div>
         <h3 className="mt-4 font-bold text-2xl">
           complete it as fast as possible
