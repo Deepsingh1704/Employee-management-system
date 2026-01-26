@@ -11,13 +11,24 @@ const App = () => {
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("loggedInUser");
-
     if (loggedInUser) {
-      const userData = JSON.parse(loggedInUser);
-      setUser(userData.role);
-      setLoggedInUserData(userData.data);
+      const userD = JSON.parse(loggedInUser);
+      console.log(userD);
+      setUser(userD.role);
+      setLoggedInUserData(userD.data);
+      // console.log("User logged in hai");
     }
   }, []);
+
+  // useEffect(() => {
+  //   const loggedInUser = localStorage.getItem("loggedInUser");
+
+  //   if (loggedInUser) {
+  //     const userData = JSON.parse(loggedInUser);
+  //     setUser(userData.role);
+  //     setLoggedInUserData(userData.data);
+  //   }
+  // }, []);
 
   const handleLogin = (email, password) => {
     if (email == "admin@me.com" && password == "123") {
@@ -35,10 +46,10 @@ const App = () => {
           "loggedInUser",
           JSON.stringify({ role: "employee", data: employee }),
         );
+      } else {
+        console.log("Invalid credentials");
+        alert("Invalid Credentials");
       }
-    } else {
-      console.log("Invalid credentials");
-      alert("Invalid Credentials");
     }
   };
 
@@ -53,5 +64,4 @@ const App = () => {
     </>
   );
 };
-
 export default App;
