@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
-* {
+/* * {
   color: #fff;
+} */
+
+@layer base {
+  body {
+    @apply text-[#fff];
+  }
 }
 
 body {

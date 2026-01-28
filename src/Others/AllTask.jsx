@@ -5,42 +5,41 @@ const AllTask = () => {
   const [employees] = useContext(AuthContext);
 
   return (
-    <>
-      {/* HEADER (normal, no scroll) */}
-      <div>
+    <div className="h-[34%]">
+      <div className="mt-4">
         <div className="bg-blue-500 px-4 py-3 mb-2 flex justify-between rounded font-bold">
-          <h2 className="w-1/5">Employee Name</h2>
-          <h5 className="w-1/5">New Task</h5>
-          <h5 className="w-1/5">Active Task</h5>
-          <h5 className="w-1/5">Completed</h5>
-          <h3 className="w-1/5">Failed</h3>
+          <h2 className="w-1/5 text-lg font-medium  ">Employee Name</h2>
+          <h5 className="w-1/5 text-lg font-medium ">New Task</h5>
+          <h5 className="w-1/5 text-lg font-medium ">Active Task</h5>
+          <h5 className="w-1/5 text-lg font-medium ">Completed</h5>
+          <h3 className="w-1/5 text-lg font-medium ">Failed</h3>
         </div>
       </div>
 
       {/* ROWS ONLY (scrollable) */}
-      <div className="h-[80%] overflow-auto">
-        {employees.map((elem) => (
+      <div id="Tasklist" className="h-[80%] overflow-auto">
+        {employees.map((elem, idx) => (
           <div
-            key={elem.id}
-            className="bg-blue-400 px-4 py-3 mb-2 flex justify-between rounded"
+            key={idx}
+            className=" border-2 border-emerald-500 px-4 py-3 mb-2 flex justify-between rounded"
           >
-            <h2 className="w-1/5">{elem.firstName}</h2>
-            <h5 className="w-1/5">
-              {elem.tasks?.filter((t) => t.newTask).length}
+            <h2 className="w-1/5  text-lg font-medium ">{elem.firstName}</h2>
+            <h5 className="w-1/5 text-blue-500 px-3 text-lg font-medium ">
+              {elem.taskCounts.newTask}
             </h5>
-            <h5 className="w-1/5">
-              {elem.tasks?.filter((t) => t.active).length}
+            <h5 className="w-1/5 text-yellow-400 px-3 text-lg font-medium ">
+              {elem.taskCounts.active}
             </h5>
-            <h5 className="w-1/5">
-              {elem.tasks?.filter((t) => t.completed).length}
+            <h5 className="w-1/5 text-white px-3 text-lg font-medium ">
+              {elem.taskCounts.completed}
             </h5>
-            <h3 className="w-1/5">
-              {elem.tasks?.filter((t) => t.failed).length}
+            <h3 className="w-1/5 text-red-600 px-3 text-lg font-medium  ">
+              {elem.taskCounts.failed}
             </h3>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

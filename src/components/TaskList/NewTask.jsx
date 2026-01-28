@@ -10,7 +10,7 @@ const NewTask = ({ data }) => {
       <h3 className="mt-4 font-bold text-2xl">{data.taskTitle}</h3>
       <p className="mt-3 text-sm font-semibold">{data.taskDescription}</p>
       <div className="mt-4 flex items-center justify-between ">
-        <button className="py-2 px-3 bg-emerald-600 rounded text-sm font-semibold border-none outline-none">
+        <button className="py-2 px-3 bg-blue-600 rounded text-sm font-semibold border-none outline-none">
           AcceptTask
         </button>
       </div>

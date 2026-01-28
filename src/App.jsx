@@ -13,7 +13,7 @@ const App = () => {
     const loggedInUser = localStorage.getItem("loggedInUser");
     if (loggedInUser) {
       const userD = JSON.parse(loggedInUser);
-      console.log(userD);
+      // console.log(userD);
       setUser(userD.role);
       setLoggedInUserData(userD.data);
       // console.log("User logged in hai");
